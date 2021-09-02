@@ -22,40 +22,21 @@ $(document).ready(function(){
       } // End if
     });
 
+$(document).ready($('nav').hide())
 
-    // $('h1').hover(
-    //     function(){
-    //         $('nav').show().delay(200).fadeIn(200);
-    //     },
 
-    //     function () {
-    //         $('nav').hide().delay(200).fadeOut(200);
-    //     }
-    // )
-
-    $('h1').mouseenter(
+    $('h1, nav').mouseenter(
         function(){
-            $('nav').show().fadeIn(200);
+            $('nav').fadeIn().stop().show()
         }
     )
 
-    $('nav').mouseenter(
+
+
+    $('h1, nav').mouseleave(
         function(){
-            $('nav').show().fadeIn(200);
+            $('nav').fadeOut()
         }
     )
-
-    $('h1').mouseleave(
-        function(){
-            $('nav').hide().fadeOut(200);
-        }
-    )
-
-    $('nav').mouseleave(
-        function(){
-            $('nav').hide().fadeOut(200);
-        }
-    )
-
 
   });
