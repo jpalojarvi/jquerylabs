@@ -40,3 +40,12 @@ $(document).ready($('nav').hide())
     )
 
   });
+
+  // Using animate
+
+  $('h1, nav').mouseenter(function(event){
+    $('nav').animate({
+      
+    })
+
+  })
