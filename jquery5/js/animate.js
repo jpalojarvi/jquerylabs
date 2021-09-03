@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  
     // Add smooth scrolling to all links
     $("a").on('click', function(event) {
   
@@ -22,30 +23,40 @@ $(document).ready(function(){
       } // End if
     });
 
-$(document).ready($('nav').hide())
+    // Using default methods
+// $(document).ready($('nav').hide())
+//     $('h1, nav').mouseenter(
+//         function(){
+//             $('nav').fadeIn().stop().show()
+//         }
+//     )
 
 
-    $('h1, nav').mouseenter(
-        function(){
-            $('nav').fadeIn().stop().show()
-        }
-    )
 
+//     $('h1, nav').mouseleave(
+//         function(){
+//             $('nav').fadeOut()
+//         }
+//     )
 
-
-    $('h1, nav').mouseleave(
-        function(){
-            $('nav').fadeOut()
-        }
-    )
-
-  });
+//   });
 
   // Using animate
-
   $('h1, nav').mouseenter(function(event){
+
     $('nav').animate({
+      opacity: 1
       
     })
 
   })
+
+  $('h1, nav').mouseleave(function(event){
+
+    $('nav').animate({
+      opacity: 0
+      
+    })
+
+  })
+})
